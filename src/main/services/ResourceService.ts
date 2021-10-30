@@ -178,8 +178,10 @@ export default class ResourceService extends StatefulService<ResourceState> impl
   @internal
   async initialize() {
     for (const domain of [
-      ResourceDomain.Mods, ResourceDomain.ResourcePacks,
-      ResourceDomain.Saves, ResourceDomain.Modpacks,
+      ResourceDomain.Mods,
+      ResourceDomain.ResourcePacks,
+      ResourceDomain.Saves,
+      ResourceDomain.Modpacks,
       ResourceDomain.ShaderPacks,
       ResourceDomain.Unknown,
     ]) {

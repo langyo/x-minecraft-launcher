@@ -16,6 +16,7 @@ import { InstanceResourcePacksServiceKey, InstanceResourcePacksServiceMethods, I
 import { InstanceSavesServiceKey, InstanceSavesServiceMethods, SaveState } from '/@shared/services/InstanceSavesService'
 import { InstanceServerInfoServiceKey, InstanceServerInfoServiceMethods, ServerInfoState } from '/@shared/services/InstanceServerInfoService'
 import { InstanceServiceKey, InstanceServiceMethods, InstanceState } from '/@shared/services/InstanceService'
+import { InstanceShaderPacksServiceKey, InstanceShaderPacksServiceTemplate, InstanceShaderPacksState } from '/@shared/services/InstanceShaderPacksService'
 import { InstanceVersionServiceKey, InstanceVersionServiceMethods, InstanceVersionState } from '/@shared/services/InstanceVersionService'
 import { JavaServiceKey, JavaServiceMethods, JavaState } from '/@shared/services/JavaService'
 import { LaunchServiceKey, LaunchServiceMethods, LaunchState } from '/@shared/services/LaunchService'
@@ -190,6 +191,7 @@ export function createServiceFactory(store: Store<any>) {
   factory.register(ResourceServiceKey, ResourceServiceMethods, [], () => new ResourceState())
   factory.register(CurseForgeServiceKey, CurseForgeServiceMethods, [ResourceServiceKey], (res) => new CurseforgeState(res))
   factory.register(UserServiceKey, UserServiceMethods, [], () => new UserState())
+  factory.register(InstanceShaderPacksServiceKey, InstanceShaderPacksServiceTemplate, [], () => new InstanceShaderPacksState())
 
   return factory
 }

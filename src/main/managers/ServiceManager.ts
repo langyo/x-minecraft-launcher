@@ -15,6 +15,7 @@ import InstanceModsService from '../services/InstanceModsService'
 import InstanceResourcePackService from '../services/InstanceResourcePacksService'
 import InstanceSavesService from '../services/InstanceSavesService'
 import InstanceService from '../services/InstanceService'
+import InstanceShaderPacksService from '../services/InstanceShaderPacksService'
 import InstanceVersionService from '../services/InstanceVersionService'
 import JavaService from '../services/JavaService'
 import LaunchService from '../services/LaunchService'
@@ -255,6 +256,7 @@ export default class ServiceManager extends Manager {
     this.addService(VersionService)
     this.addService(InstanceVersionService)
     this.addService(InstanceJavaService)
+    this.addService(InstanceShaderPacksService)
 
     this.setupServices()
     await this.initializeServices()
