@@ -7,7 +7,7 @@ import ExternalAuthSkinService from '../services/ExternalAuthSkinService'
 import ImportService from '../services/ImportService'
 import InstallService from '../services/InstallService'
 import InstanceCurseforgeIOService from '../services/InstanceCurseforgeIOService'
-import InstanceGameSettingService from '../services/InstanceGameSettingService'
+import InstanceOptionsService from '../services/InstanceOptionsService'
 import InstanceIOService from '../services/InstanceIOService'
 import InstanceJavaService from '../services/InstanceJavaService'
 import InstanceLogService from '../services/InstanceLogService'
@@ -240,7 +240,7 @@ export default class ServiceManager extends Manager {
     this.addService(ImportService)
     this.addService(InstallService)
     this.addService(InstanceCurseforgeIOService)
-    this.addService(InstanceGameSettingService)
+    this.addService(InstanceOptionsService)
     this.addService(InstanceIOService)
     this.addService(InstanceLogService)
     this.addService(InstanceModsService)

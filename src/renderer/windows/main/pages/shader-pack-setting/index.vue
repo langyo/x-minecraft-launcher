@@ -32,7 +32,7 @@
         </v-btn> -->
       </v-toolbar>
       <v-layout column>
-        <v-flex>
+        <v-flex class="gap-5">
           <transition-group tag="div" name="transition-list">
             <ShaderPackCard v-for="pack in shaderPacks" :key="pack.hash" :pack="pack"></ShaderPackCard>
           </transition-group>
