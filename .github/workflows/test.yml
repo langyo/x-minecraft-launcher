@@ -8,8 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-      with:
-        submodules: recursive
     - uses: pnpm/action-setup@v2.0.1
       with:
         version: 6.24.4
@@ -18,9 +16,6 @@ jobs:
       with:
         node-version: 15
         cache: 'pnpm'
-    - name: Install
-      run: |
-        pnpm install --filter ./.github/actions
     - name: Upload to Azure
       uses: ci010/upload-blob-to-azure@master
       env:
