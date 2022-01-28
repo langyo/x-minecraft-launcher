@@ -190,13 +190,6 @@ jobs:
         prerelease: false
         body: ${{ steps.prepare_release.outputs.body }}
         asset_dir_path: ./build
-    - name: Update Web Page
-      uses: benc-uk/workflow-dispatch@v1
-      with:
-        workflow: deploy
-        token: ${{ secrets.PAT_GITHUB_TOKEN }}
-        ref: 'master'
-        repo: 'voxelum/xmcl-page'
     - name: Upload to Azure
       uses: ci010/upload-blob-to-azure@master
       env:
@@ -205,3 +198,10 @@ jobs:
         account: xmcl
         container: releases
         directory: ./build
+    - name: Update Web Page
+      uses: benc-uk/workflow-dispatch@v1
+      with:
+        workflow: Deploy
+        token: ${{ secrets.PAT_GITHUB_TOKEN }}
+        ref: 'master'
+        repo: 'voxelum/xmcl-page'
